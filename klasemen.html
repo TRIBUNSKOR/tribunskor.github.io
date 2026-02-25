@@ -1,231 +1,81 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Klasemen Elite - TribunSkor</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Klasemen Liga Inggris</title>
 <style>
-body{font-family:Arial;margin:0;background:#ececec;}
-header{background:#0a7f3f;color:white;padding:15px;text-align:center;font-weight:bold;}
-
-.menu{
-background:white;
-padding:10px;
-text-align:center;
-position:sticky;
-top:0;
-}
-
-.menu button{
-margin:5px;
-padding:8px 12px;
-border:none;
-background:#0a7f3f;
-color:white;
-border-radius:6px;
-font-weight:bold;
-}
-
-.container{padding:10px;}
-
-table{
-width:100%;
-background:white;
-border-collapse:collapse;
-border-radius:10px;
-overflow:hidden;
-}
-
-th{
-background:#0a7f3f;
-color:white;
-padding:8px;
-font-size:14px;
-}
-
-td{
-padding:8px;
-border-bottom:1px solid #eee;
-font-size:14px;
-}
-
-.team{
-display:flex;
-align-items:center;
-gap:6px;
-}
-
-.team img{
-width:22px;
-height:22px;
-}
-td img{
- width:22px;
- height:22px;
- object-fit:contain;
- margin-right:6px;
- vertical-align:middle;
-}
-.liga{display:none;}
-.active{display:block;}
+body{font-family:Arial;background:#f2f2f2;margin:0;padding:10px;}
+h2{text-align:center;}
+table{width:100%;background:#fff;border-collapse:collapse;}
+th,td{padding:8px;border-bottom:1px solid #ddd;font-size:14px;}
+th{background:#0a7f3f;color:#fff;}
+.team{display:flex;align-items:center;gap:6px;}
+.team img{width:22px;height:22px;object-fit:contain;}
 </style>
-
-<script>
-function tampilLiga(id){
-document.querySelectorAll('.liga').forEach(el=>el.classList.remove('active'));
-document.getElementById(id).classList.add('active');
-}
-</script>
 </head>
 
 <body>
 
-<header>📊 Klasemen Elite TribunSkor</header>
+<h2>🏆 Klasemen Liga Inggris</h2>
 
-<div class="menu">
-<button onclick="tampilLiga('inggris')">🇬🇧 Inggris</button>
-<button onclick="tampilLiga('spanyol')">🇪🇸 Spanyol</button>
-<button onclick="tampilLiga('italia')">🇮🇹 Italia</button>
-</div>
-
-<div class="container">
-
-<!-- LIGA INGGRIS -->
-<div id="inggris">
 <table>
-</div>
 <tr>
 <th>Pos</th>
-<th>Team</th>
+<th>Tim</th>
 <th>Main</th>
 <th>Poin</th>
-<th>Menang</th>
-<th>Seri</th>
-<th>Kalah</th>
-<th>Goal</th>
-<th>+/-</th>
 </tr>
-
-<tr><td>1</td><td class="team" data-team="Arsenal">Arsenal</td><td>28</td><td><b>61</b></td><td>18</td><td>7</td><td>3</td><td>56</td><td>35</td></tr>
-
-<tr><td>2</td><td class="team" data-team="Man City">Man City</td><td>27</td><td><b>56</b></td><td>17</td><td>5</td><td>5</td><td>56</td><td>31</td></tr>
-
-<tr><td>3</td><td class="team" data-team="Aston Villa">Aston Villa</td><td>27</td><td><b>51</b></td><td>15</td><td>6</td><td>6</td><td>38</td><td>10</td></tr>
-
-<tr><td>4</td><td class="team" data-team="Man United">Man United</td><td>27</td><td><b>48</b></td><td>13</td><td>9</td><td>5</td><td>48</td><td>11</td></tr>
-
-<tr><td>5</td><td class="team" data-team="Chelsea">Chelsea</td><td>27</td><td><b>45</b></td><td>12</td><td>9</td><td>6</td><td>48</td><td>17</td></tr>
-
-<tr><td>6</td><td class="team" data-team="Liverpool">Liverpool</td><td>27</td><td><b>45</b></td><td>13</td><td>6</td><td>8</td><td>42</td><td>7</td></tr>
-
-<tr><td>7</td><td class="team" data-team="Brentford">Brentford</td><td>27</td><td><b>40</b></td><td>12</td><td>4</td><td>11</td><td>40</td><td>3</td></tr>
-
-<tr><td>8</td><td class="team" data-team="Bournemouth">Bournemouth</td><td>27</td><td><b>38</b></td><td>9</td><td>11</td><td>7</td><td>43</td><td>-2</td></tr>
-
-<tr><td>9</td><td class="team" data-team="Everton">Everton</td><td>27</td><td><b>37</b></td><td>10</td><td>7</td><td>10</td><td>29</td><td>-2</td></tr>
-
-<tr><td>10</td><td class="team" data-team="Fulham">Fulham</td><td>27</td><td><b>37</b></td><td>11</td><td>4</td><td>12</td><td>38</td><td>-3</td></tr>
-
-<tr><td>11</td><td class="team" data-team="Newcastle">Newcastle</td><td>27</td><td><b>36</b></td><td>10</td><td>6</td><td>11</td><td>38</td><td>-1</td></tr>
-
-<tr><td>12</td><td class="team" data-team="Sunderland">Sunderland</td><td>27</td><td><b>36</b></td><td>9</td><td>9</td><td>9</td><td>28</td><td>-5</td></tr>
-
-<tr><td>13</td><td class="team" data-team="Crystal Palace">Crystal Palace</td><td>27</td><td><b>35</b></td><td>9</td><td>8</td><td>10</td><td>29</td><td>-3</td></tr>
-
-<tr><td>14</td><td class="team" data-team="Brighton">Brighton</td><td>27</td><td><b>34</b></td><td>8</td><td>10</td><td>9</td><td>36</td><td>2</td></tr>
-
-<tr><td>15</td><td class="team" data-team="Leeds United">Leeds United</td><td>27</td><td><b>31</b></td><td>7</td><td>10</td><td>10</td><td>37</td><td>-9</td></tr>
-
-<tr><td>16</td><td class="team" data-team="Tottenham">Tottenham</td><td>27</td><td><b>29</b></td><td>7</td><td>8</td><td>12</td><td>37</td><td>-4</td></tr>
-
-<tr><td>17</td><td class="team" data-team="Nottingham Forest">Nottingham Forest</td><td>27</td><td><b>27</b></td><td>7</td><td>6</td><td>14</td><td>25</td><td>-14</td></tr>
-
-<tr><td>18</td><td class="team" data-team="West Ham">West Ham</td><td>27</td><td><b>25</b></td><td>6</td><td>7</td><td>14</td><td>32</td><td>-17</td></tr>
-
-<tr><td>19</td><td class="team" data-team="Burnley">Burnley</td><td>27</td><td><b>19</b></td><td>4</td><td>7</td><td>16</td><td>29</td><td>-23</td></tr>
-
-<tr><td>20</td><td class="team" data-team="Wolves">Wolves</td><td>28</td><td><b>10</b></td><td>1</td><td>7</td><td>20</td><td>18</td><td>-33</td></tr>
-
-</table>
-
-<!-- LIGA SPANYOL -->
-<div id="spanyol" class="liga">
-<table>
-<tr><th>Pos</th><th>Tim</th><th>Main</th><th>Poin</th></tr>
 
 <tr>
 <td>1</td>
-<td class="team"><img src="https://upload.wikimedia.org/wikipedia/en/4/47/FC_Barcelona_%28crest%29.svg">Barcelona</td>
-<td>27</td><td>60</td>
+<td class="team">
+<img src="https://crests.football-data.org/57.png"> Arsenal
+</td>
+<td>28</td><td>61</td>
 </tr>
 
 <tr>
 <td>2</td>
-<td class="team"><img src="https://upload.wikimedia.org/wikipedia/en/5/56/Real_Madrid_CF.svg">Real Madrid</td>
-<td>27</td><td>58</td>
-</tr>
-
-</table>
-</div>
-
-<!-- LIGA ITALIA -->
-<div id="italia" class="liga">
-<table>
-<tr><th>Pos</th><th>Tim</th><th>Main</th><th>Poin</th></tr>
-
-<tr>
-<td>1</td>
-<td class="team"><img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Inter_Milan.svg">Inter Milan</td>
-<td>27</td><td>62</td>
+<td class="team">
+<img src="https://crests.football-data.org/65.png"> Man City
+</td>
+<td>27</td><td>56</td>
 </tr>
 
 <tr>
-<td>2</td>
-<td class="team"><img src="https://upload.wikimedia.org/wikipedia/commons/1/15/Juventus_FC_2017_logo.svg">Juventus</td>
-<td>27</td><td>55</td>
+<td>3</td>
+<td class="team">
+<img src="https://crests.football-data.org/66.png"> Man United
+</td>
+<td>27</td><td>48</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td class="team">
+<img src="https://crests.football-data.org/61.png"> Chelsea
+</td>
+<td>27</td><td>45</td>
+</tr>
+
+<tr>
+<td>5</td>
+<td class="team">
+<img src="https://crests.football-data.org/64.png"> Liverpool
+</td>
+<td>27</td><td>45</td>
+</tr>
+
+<tr>
+<td>6</td>
+<td class="team">
+<img src="https://upload.wikimedia.org/wikipedia/en/7/77/SAFC_crest.svg">
+Sunderland
+</td>
+<td>27</td><td>36</td>
 </tr>
 
 </table>
-</div>
-
-</div>
-<script>
-document.addEventListener("DOMContentLoaded",function(){
-
-const logoTeam={
-"Arsenal":"https://crests.football-data.org/57.png",
-"Man City":"https://crests.football-data.org/65.png",
-"Aston Villa":"https://crests.football-data.org/58.png",
-"Man United":"https://crests.football-data.org/66.png",
-"Chelsea":"https://crests.football-data.org/61.png",
-"Liverpool":"https://crests.football-data.org/64.png",
-"Brentford":"https://crests.football-data.org/402.png",
-"Bournemouth":"https://crests.football-data.org/1044.png",
-"Everton":"https://crests.football-data.org/62.png",
-"Fulham":"https://crests.football-data.org/63.png",
-"Newcastle":"https://crests.football-data.org/67.png",
-"Sunderland":"https://upload.wikimedia.org/wikipedia/en/7/77/SAFC_crest.svg",
-"Crystal Palace":"https://crests.football-data.org/354.png",
-"Brighton":"https://crests.football-data.org/397.png",
-"Leeds United":"https://crests.football-data.org/341.png",
-"Tottenham":"https://crests.football-data.org/73.png",
-"Nottingham Forest":"https://crests.football-data.org/351.png",
-"West Ham":"https://crests.football-data.org/563.png",
-"Burnley":"https://crests.football-data.org/328.png",
-"Wolves":"https://crests.football-data.org/76.png"
-};
-
-document.querySelectorAll(".team").forEach(el=>{
-let nama = el.textContent.replace(/\s+/g,' ').trim();
-
-if(!el.querySelector("img") && logoTeam[nama]){
-el.insertAdjacentHTML("afterbegin",
-'<img src="'+logoTeam[nama]+'" width="22" style="margin-right:6px;">'
-);
-}
-});
-
-});
-</script>
 
 </body>
 </html>
