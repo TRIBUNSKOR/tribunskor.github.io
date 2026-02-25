@@ -7,7 +7,7 @@
 body{
 font-family:Arial;
 margin:0;
-background:#f5f5f5;
+background:#ececec;
 }
 header{
 background:#0a7f3f;
@@ -18,21 +18,33 @@ font-size:22px;
 font-weight:bold;
 }
 .menu{
-background:#ffffff;
-padding:10px;
+background:white;
+padding:12px;
 text-align:center;
+box-shadow:0 2px 5px rgba(0,0,0,0.1);
 }
 .menu a{
-margin:5px;
+margin:6px;
 text-decoration:none;
 color:#0a7f3f;
 font-weight:bold;
 }
-.box{
+.container{
+padding:10px;
+}
+.card{
 background:white;
-margin:15px;
+margin:10px 0;
 padding:15px;
 border-radius:10px;
+box-shadow:0 2px 6px rgba(0,0,0,0.1);
+}
+.banner{
+background:#ffd54f;
+padding:15px;
+border-radius:10px;
+text-align:center;
+font-weight:bold;
 }
 </style>
 </head>
@@ -49,14 +61,27 @@ border-radius:10px;
 <a href="#">Liga Indonesia</a>
 </div>
 
-<div class="box">
-<h3>Selamat Datang di TribunSkor</h3>
-<p>Portal bola terbaru - berita, skor, dan klasemen.</p>
+<div class="container">
+
+<div class="banner">
+Area Banner Iklan (Nanti tempel kode Adsterra di sini 💰)
 </div>
 
-<div class="box">
-<h3>Berita Terbaru</h3>
-<p>Nanti di sini kamu bisa tambah berita bola + iklan Adsterra 😎</p>
+<div class="card">
+<h3>🔥 Berita Trending</h3>
+<p>Contoh berita bola terbaru tampil seperti portal olahraga.</p>
+</div>
+
+<div class="card">
+<h3>📊 Klasemen Liga Inggris</h3>
+<p>Nanti di sini kita buat tabel klasemen semi otomatis.</p>
+</div>
+
+<div class="card">
+<h3>📅 Jadwal Pertandingan</h3>
+<p>Nanti tampil jadwal live update.</p>
+</div>
+
 </div>
 
 </body>
