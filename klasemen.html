@@ -1,20 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Klasemen - TribunSkor</title>
+<title>Klasemen Elite - TribunSkor</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body{font-family:Arial;margin:0;background:#ececec;}
 header{background:#0a7f3f;color:white;padding:15px;text-align:center;font-weight:bold;}
-.menu{background:white;padding:10px;text-align:center;}
-.menu a{margin:6px;text-decoration:none;color:#0a7f3f;font-weight:bold;}
+
+.menu{
+background:white;
+padding:10px;
+text-align:center;
+position:sticky;
+top:0;
+}
+
+.menu button{
+margin:5px;
+padding:8px 12px;
+border:none;
+background:#0a7f3f;
+color:white;
+border-radius:6px;
+font-weight:bold;
+}
+
 .container{padding:10px;}
 
 table{
 width:100%;
 background:white;
-border-radius:10px;
 border-collapse:collapse;
+border-radius:10px;
 overflow:hidden;
 }
 
@@ -41,92 +58,96 @@ gap:6px;
 width:22px;
 height:22px;
 }
+
+.liga{display:none;}
+.active{display:block;}
 </style>
+
+<script>
+function tampilLiga(id){
+document.querySelectorAll('.liga').forEach(el=>el.classList.remove('active'));
+document.getElementById(id).classList.add('active');
+}
+</script>
 </head>
 
 <body>
 
-<header>📊 Klasemen Liga</header>
+<header>📊 Klasemen Elite TribunSkor</header>
 
 <div class="menu">
-<a href="klasemen.html">🇬🇧 Inggris</a>
-<a href="#">🇪🇸 Spanyol</a>
-<a href="#">🇮🇹 Italia</a>
-<a href="#">🇩🇪 Bundesliga</a>
+<button onclick="tampilLiga('inggris')">🇬🇧 Inggris</button>
+<button onclick="tampilLiga('spanyol')">🇪🇸 Spanyol</button>
+<button onclick="tampilLiga('italia')">🇮🇹 Italia</button>
 </div>
 
 <div class="container">
 
+<!-- LIGA INGGRIS -->
+<div id="inggris" class="liga active">
 <table>
-
-<tr>
-<th>Pos</th>
-<th>Tim</th>
-<th>Main</th>
-<th>Poin</th>
-</tr>
+<tr><th>Pos</th><th>Tim</th><th>Main</th><th>Poin</th></tr>
 
 <tr>
 <td>1</td>
-<td class="team">
-<img src="https://upload.wikimedia.org/wikipedia/en/5/53/Arsenal_FC.svg">
-Arsenal
-</td>
-<td>28</td>
-<td>61</td>
+<td class="team"><img src="https://upload.wikimedia.org/wikipedia/en/5/53/Arsenal_FC.svg">Arsenal</td>
+<td>28</td><td>61</td>
 </tr>
 
 <tr>
 <td>2</td>
-<td class="team">
-<img src="https://upload.wikimedia.org/wikipedia/en/e/eb/Manchester_City_FC_badge.svg">
-Man City
-</td>
-<td>27</td>
-<td>56</td>
+<td class="team"><img src="https://upload.wikimedia.org/wikipedia/en/e/eb/Manchester_City_FC_badge.svg">Man City</td>
+<td>27</td><td>56</td>
 </tr>
 
 <tr>
 <td>3</td>
-<td class="team">
-<img src="https://upload.wikimedia.org/wikipedia/en/9/9f/Aston_Villa_logo.svg">
-Aston Villa
-</td>
-<td>27</td>
-<td>51</td>
-</tr>
-
-<tr>
-<td>4</td>
-<td class="team">
-<img src="https://upload.wikimedia.org/wikipedia/en/7/7a/Manchester_United_FC_crest.svg">
-Man United
-</td>
-<td>27</td>
-<td>48</td>
-</tr>
-
-<tr>
-<td>5</td>
-<td class="team">
-<img src="https://upload.wikimedia.org/wikipedia/en/c/cc/Chelsea_FC.svg">
-Chelsea
-</td>
-<td>27</td>
-<td>45</td>
-</tr>
-
-<tr>
-<td>6</td>
-<td class="team">
-<img src="https://upload.wikimedia.org/wikipedia/en/0/0c/Liverpool_FC.svg">
-Liverpool
-</td>
-<td>27</td>
-<td>45</td>
+<td class="team"><img src="https://upload.wikimedia.org/wikipedia/en/7/7a/Manchester_United_FC_crest.svg">Man United</td>
+<td>27</td><td>48</td>
 </tr>
 
 </table>
+</div>
+
+<!-- LIGA SPANYOL -->
+<div id="spanyol" class="liga">
+<table>
+<tr><th>Pos</th><th>Tim</th><th>Main</th><th>Poin</th></tr>
+
+<tr>
+<td>1</td>
+<td class="team"><img src="https://upload.wikimedia.org/wikipedia/en/4/47/FC_Barcelona_%28crest%29.svg">Barcelona</td>
+<td>27</td><td>60</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td class="team"><img src="https://upload.wikimedia.org/wikipedia/en/5/56/Real_Madrid_CF.svg">Real Madrid</td>
+<td>27</td><td>58</td>
+</tr>
+
+</table>
+</div>
+
+<!-- LIGA ITALIA -->
+<div id="italia" class="liga">
+<table>
+<tr><th>Pos</th><th>Tim</th><th>Main</th><th>Poin</th></tr>
+
+<tr>
+<td>1</td>
+<td class="team"><img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Inter_Milan.svg">Inter Milan</td>
+<td>27</td><td>62</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td class="team"><img src="https://upload.wikimedia.org/wikipedia/commons/1/15/Juventus_FC_2017_logo.svg">Juventus</td>
+<td>27</td><td>55</td>
+</tr>
+
+</table>
+</div>
 
 </div>
 
