@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Klasemen Liga Inggris - Fixed</title>
+    <title>Klasemen Liga Inggris</title>
     <style>
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
@@ -14,29 +14,32 @@
         }
         .table-container {
             background-color: white;
-            border-radius: 12px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
             overflow-x: auto;
             width: 100%;
-            max-width: 900px;
+            max-width: 850px;
         }
         table {
             width: 100%;
             border-collapse: collapse;
-            text-align: left;
+            min-width: 600px;
         }
         th, td {
-            padding: 14px 18px;
+            padding: 12px 15px;
             font-size: 14px;
-            border-bottom: 1px solid #f0f0f0;
+            border-bottom: 1px solid #eee;
         }
         th {
             background-color: #fafafa;
             color: #888;
             font-size: 11px;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            text-align: center;
         }
+        .text-left { text-align: left; }
+        .text-center { text-align: center; }
+        
         .team-cell {
             display: flex;
             align-items: center;
@@ -44,13 +47,16 @@
             font-weight: 500;
         }
         .team-logo {
-            width: 25px;
-            height: 25px;
+            width: 24px;
+            height: 24px;
             object-fit: contain;
         }
-        .points { font-weight: bold; color: #000; }
-        .text-center { text-align: center; }
-        tr:hover { background-color: #fdfdfd; }
+        .points {
+            font-weight: 800;
+            color: #000;
+        }
+        tr:hover { background-color: #f9f9f9; }
+        .pos { width: 40px; color: #666; }
     </style>
 </head>
 <body>
@@ -59,72 +65,241 @@
     <table>
         <thead>
             <tr>
-                <th style="width: 40px;" class="text-center">Pos</th>
-                <th>Team</th>
-                <th class="text-center">Main</th>
-                <th class="text-center">Poin</th>
-                <th class="text-center">Menang</th>
-                <th class="text-center">Seri</th>
-                <th class="text-center">Kalah</th>
-                <th class="text-center">Goal</th>
-                <th class="text-center">+/-</th>
+                <th class="pos">Pos</th>
+                <th class="text-left">Team</th>
+                <th>Main</th>
+                <th>Poin</th>
+                <th>Menang</th>
+                <th>Seri</th>
+                <th>Kalah</th>
+                <th>Goal</th>
+                <th>+/-</th>
             </tr>
         </thead>
-        <tbody id="table-body">
-            </tbody>
+        <tbody>
+            <tr>
+                <td class="text-center pos">1</td>
+                <td class="text-left"><div class="team-cell"><img src="https://crests.football-data.org/57.png" class="team-logo"> Arsenal</div></td>
+                <td class="text-center">28</td>
+                <td class="text-center points">61</td>
+                <td class="text-center">18</td>
+                <td class="text-center">7</td>
+                <td class="text-center">3</td>
+                <td class="text-center">56</td>
+                <td class="text-center">35</td>
+            </tr>
+            <tr>
+                <td class="text-center pos">2</td>
+                <td class="text-left"><div class="team-cell"><img src="https://crests.football-data.org/65.png" class="team-logo"> Man City</div></td>
+                <td class="text-center">27</td>
+                <td class="text-center points">56</td>
+                <td class="text-center">17</td>
+                <td class="text-center">5</td>
+                <td class="text-center">5</td>
+                <td class="text-center">56</td>
+                <td class="text-center">31</td>
+            </tr>
+            <tr>
+                <td class="text-center pos">3</td>
+                <td class="text-left"><div class="team-cell"><img src="https://crests.football-data.org/58.png" class="team-logo"> Aston Villa</div></td>
+                <td class="text-center">27</td>
+                <td class="text-center points">51</td>
+                <td class="text-center">15</td>
+                <td class="text-center">6</td>
+                <td class="text-center">6</td>
+                <td class="text-center">38</td>
+                <td class="text-center">10</td>
+            </tr>
+            <tr>
+                <td class="text-center pos">4</td>
+                <td class="text-left"><div class="team-cell"><img src="https://crests.football-data.org/66.png" class="team-logo"> Man United</div></td>
+                <td class="text-center">27</td>
+                <td class="text-center points">48</td>
+                <td class="text-center">13</td>
+                <td class="text-center">9</td>
+                <td class="text-center">5</td>
+                <td class="text-center">48</td>
+                <td class="text-center">11</td>
+            </tr>
+            <tr>
+                <td class="text-center pos">5</td>
+                <td class="text-left"><div class="team-cell"><img src="https://crests.football-data.org/61.png" class="team-logo"> Chelsea</div></td>
+                <td class="text-center">27</td>
+                <td class="text-center points">45</td>
+                <td class="text-center">12</td>
+                <td class="text-center">9</td>
+                <td class="text-center">6</td>
+                <td class="text-center">48</td>
+                <td class="text-center">17</td>
+            </tr>
+            <tr>
+                <td class="text-center pos">6</td>
+                <td class="text-left"><div class="team-cell"><img src="https://crests.football-data.org/64.png" class="team-logo"> Liverpool</div></td>
+                <td class="text-center">27</td>
+                <td class="text-center points">45</td>
+                <td class="text-center">13</td>
+                <td class="text-center">6</td>
+                <td class="text-center">8</td>
+                <td class="text-center">42</td>
+                <td class="text-center">7</td>
+            </tr>
+            <tr>
+                <td class="text-center pos">7</td>
+                <td class="text-left"><div class="team-cell"><img src="https://crests.football-data.org/402.png" class="team-logo"> Brentford</div></td>
+                <td class="text-center">27</td>
+                <td class="text-center points">40</td>
+                <td class="text-center">12</td>
+                <td class="text-center">4</td>
+                <td class="text-center">11</td>
+                <td class="text-center">40</td>
+                <td class="text-center">3</td>
+            </tr>
+            <tr>
+                <td class="text-center pos">8</td>
+                <td class="text-left"><div class="team-cell"><img src="https://crests.football-data.org/1044.png" class="team-logo"> Bournemouth</div></td>
+                <td class="text-center">27</td>
+                <td class="text-center points">38</td>
+                <td class="text-center">9</td>
+                <td class="text-center">11</td>
+                <td class="text-center">7</td>
+                <td class="text-center">43</td>
+                <td class="text-center">-2</td>
+            </tr>
+            <tr>
+                <td class="text-center pos">9</td>
+                <td class="text-left"><div class="team-cell"><img src="https://crests.football-data.org/62.png" class="team-logo"> Everton</div></td>
+                <td class="text-center">27</td>
+                <td class="text-center points">37</td>
+                <td class="text-center">10</td>
+                <td class="text-center">7</td>
+                <td class="text-center">10</td>
+                <td class="text-center">29</td>
+                <td class="text-center">-2</td>
+            </tr>
+            <tr>
+                <td class="text-center pos">10</td>
+                <td class="text-left"><div class="team-cell"><img src="https://crests.football-data.org/63.png" class="team-logo"> Fulham</div></td>
+                <td class="text-center">27</td>
+                <td class="text-center points">37</td>
+                <td class="text-center">11</td>
+                <td class="text-center">4</td>
+                <td class="text-center">12</td>
+                <td class="text-center">38</td>
+                <td class="text-center">-3</td>
+            </tr>
+            <tr>
+                <td class="text-center pos">11</td>
+                <td class="text-left"><div class="team-cell"><img src="https://crests.football-data.org/67.png" class="team-logo"> Newcastle</div></td>
+                <td class="text-center">27</td>
+                <td class="text-center points">36</td>
+                <td class="text-center">10</td>
+                <td class="text-center">6</td>
+                <td class="text-center">11</td>
+                <td class="text-center">38</td>
+                <td class="text-center">-1</td>
+            </tr>
+            <tr>
+                <td class="text-center pos">12</td>
+                <td class="text-left"><div class="team-cell"><img src="https://crests.football-data.org/71.png" class="team-logo"> Sunderland</div></td>
+                <td class="text-center">27</td>
+                <td class="text-center points">36</td>
+                <td class="text-center">9</td>
+                <td class="text-center">9</td>
+                <td class="text-center">9</td>
+                <td class="text-center">28</td>
+                <td class="text-center">-5</td>
+            </tr>
+            <tr>
+                <td class="text-center pos">13</td>
+                <td class="text-left"><div class="team-cell"><img src="https://crests.football-data.org/354.png" class="team-logo"> Crystal Palace</div></td>
+                <td class="text-center">27</td>
+                <td class="text-center points">35</td>
+                <td class="text-center">9</td>
+                <td class="text-center">8</td>
+                <td class="text-center">10</td>
+                <td class="text-center">29</td>
+                <td class="text-center">-3</td>
+            </tr>
+            <tr>
+                <td class="text-center pos">14</td>
+                <td class="text-left"><div class="team-cell"><img src="https://crests.football-data.org/397.png" class="team-logo"> Brighton</div></td>
+                <td class="text-center">27</td>
+                <td class="text-center points">34</td>
+                <td class="text-center">8</td>
+                <td class="text-center">10</td>
+                <td class="text-center">9</td>
+                <td class="text-center">36</td>
+                <td class="text-center">2</td>
+            </tr>
+            <tr>
+                <td class="text-center pos">15</td>
+                <td class="text-left"><div class="team-cell"><img src="https://crests.football-data.org/341.png" class="team-logo"> Leeds United</div></td>
+                <td class="text-center">27</td>
+                <td class="text-center points">31</td>
+                <td class="text-center">7</td>
+                <td class="text-center">10</td>
+                <td class="text-center">10</td>
+                <td class="text-center">37</td>
+                <td class="text-center">-9</td>
+            </tr>
+            <tr>
+                <td class="text-center pos">16</td>
+                <td class="text-left"><div class="team-cell"><img src="https://crests.football-data.org/73.png" class="team-logo"> Tottenham</div></td>
+                <td class="text-center">27</td>
+                <td class="text-center points">29</td>
+                <td class="text-center">7</td>
+                <td class="text-center">8</td>
+                <td class="text-center">12</td>
+                <td class="text-center">37</td>
+                <td class="text-center">-4</td>
+            </tr>
+            <tr>
+                <td class="text-center pos">17</td>
+                <td class="text-left"><div class="team-cell"><img src="https://crests.football-data.org/68.png" class="team-logo"> Nottingham Forest</div></td>
+                <td class="text-center">27</td>
+                <td class="text-center points">27</td>
+                <td class="text-center">7</td>
+                <td class="text-center">6</td>
+                <td class="text-center">14</td>
+                <td class="text-center">25</td>
+                <td class="text-center">-14</td>
+            </tr>
+            <tr>
+                <td class="text-center pos">18</td>
+                <td class="text-left"><div class="team-cell"><img src="https://crests.football-data.org/563.png" class="team-logo"> West Ham</div></td>
+                <td class="text-center">27</td>
+                <td class="text-center points">25</td>
+                <td class="text-center">6</td>
+                <td class="text-center">7</td>
+                <td class="text-center">14</td>
+                <td class="text-center">32</td>
+                <td class="text-center">-17</td>
+            </tr>
+            <tr>
+                <td class="text-center pos">19</td>
+                <td class="text-left"><div class="team-cell"><img src="https://crests.football-data.org/328.png" class="team-logo"> Burnley</div></td>
+                <td class="text-center">27</td>
+                <td class="text-center points">19</td>
+                <td class="text-center">4</td>
+                <td class="text-center">7</td>
+                <td class="text-center">16</td>
+                <td class="text-center">29</td>
+                <td class="text-center">-23</td>
+            </tr>
+            <tr>
+                <td class="text-center pos">20</td>
+                <td class="text-left"><div class="team-cell"><img src="https://crests.football-data.org/76.png" class="team-logo"> Wolves</div></td>
+                <td class="text-center">28</td>
+                <td class="text-center points">10</td>
+                <td class="text-center">1</td>
+                <td class="text-center">7</td>
+                <td class="text-center">20</td>
+                <td class="text-center">18</td>
+                <td class="text-center">-33</td>
+            </tr>
+        </tbody>
     </table>
 </div>
-
-<script>
-    const teams = [
-        { pos: 1, name: "Arsenal", main: 28, poin: 61, m: 18, s: 7, k: 3, g: 56, sg: 35, id: "arsenal" },
-        { pos: 2, name: "Man City", main: 27, poin: 56, m: 17, s: 5, k: 5, g: 56, sg: 31, id: "manchester-city" },
-        { pos: 3, name: "Aston Villa", main: 27, poin: 51, m: 15, s: 6, k: 6, g: 38, sg: 10, id: "aston-villa" },
-        { pos: 4, name: "Man United", main: 27, poin: 48, m: 13, s: 9, k: 5, g: 48, sg: 11, id: "manchester-united" },
-        { pos: 5, name: "Chelsea", main: 27, poin: 45, m: 12, s: 9, k: 6, g: 48, sg: 17, id: "chelsea" },
-        { pos: 6, name: "Liverpool", main: 27, poin: 45, m: 13, s: 6, k: 8, g: 42, sg: 7, id: "liverpool" },
-        { pos: 7, name: "Brentford", main: 27, poin: 40, m: 12, s: 4, k: 11, g: 40, sg: 3, id: "brentford" },
-        { pos: 8, name: "Bournemouth", main: 27, poin: 38, m: 9, s: 11, k: 7, g: 43, sg: -2, id: "afc-bournemouth" },
-        { pos: 9, name: "Everton", main: 27, poin: 37, m: 10, s: 7, k: 10, g: 29, sg: -2, id: "everton" },
-        { pos: 10, name: "Fulham", main: 27, poin: 37, m: 11, s: 4, k: 12, g: 38, sg: -3, id: "fulham" },
-        { pos: 11, name: "Newcastle", main: 27, poin: 36, m: 10, s: 6, k: 11, g: 38, sg: -1, id: "newcastle-united" },
-        { pos: 12, name: "Sunderland", main: 27, poin: 36, m: 9, s: 9, k: 9, g: 28, sg: -5, id: "sunderland" },
-        { pos: 13, name: "Crystal Palace", main: 27, poin: 35, m: 9, s: 8, k: 10, g: 29, sg: -3, id: "crystal-palace" },
-        { pos: 14, name: "Brighton", main: 27, poin: 34, m: 8, s: 10, k: 9, g: 36, sg: 2, id: "brighton-and-hove-albion" },
-        { pos: 15, name: "Leeds United", main: 27, poin: 31, m: 7, s: 10, k: 10, g: 37, sg: -9, id: "leeds-united" },
-        { pos: 16, name: "Tottenham", main: 27, poin: 29, m: 7, s: 8, k: 12, g: 37, sg: -4, id: "tottenham-hotspur" },
-        { pos: 17, name: "Nottingham Forest", main: 27, poin: 27, m: 7, s: 6, k: 14, g: 25, sg: -14, id: "nottingham-forest" },
-        { pos: 18, name: "West Ham", main: 27, poin: 25, m: 6, s: 7, k: 14, g: 32, sg: -17, id: "west-ham-united" },
-        { pos: 19, name: "Burnley", main: 27, poin: 19, m: 4, s: 7, k: 16, g: 29, sg: -23, id: "burnley" },
-        { pos: 20, name: "Wolves", main: 28, poin: 10, m: 1, s: 7, k: 20, g: 18, sg: -33, id: "wolverhampton-wanderers" }
-    ];
-
-    const tbody = document.getElementById('table-body');
-
-    teams.forEach(t => {
-        const row = `
-            <tr>
-                <td class="text-center">${t.pos}</td>
-                <td>
-                    <div class="team-cell">
-                        <img src="https://api.sofascore.app/api/v1/team/${t.id}/image" 
-                             class="team-logo" 
-                             onerror="this.src='https://www.google.com/s2/favicons?sz=64&domain=premierleague.com'">
-                        ${t.name}
-                    </div>
-                </td>
-                <td class="text-center">${t.main}</td>
-                <td class="text-center points">${t.poin}</td>
-                <td class="text-center">${t.m}</td>
-                <td class="text-center">${t.s}</td>
-                <td class="text-center">${t.k}</td>
-                <td class="text-center">${t.g}</td>
-                <td class="text-center">${t.sg}</td>
-            </tr>
-        `;
-        tbody.innerHTML += row;
-    });
-</script>
 
 </body>
 </html>
