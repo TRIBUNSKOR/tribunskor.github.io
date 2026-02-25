@@ -1,0 +1,17 @@
+{
+  "inggris": [
+    {"pos":1,"team":"Arsenal","main":28,"poin":61},
+    {"pos":2,"team":"Man City","main":27,"poin":56},
+    {"pos":3,"team":"Aston Villa","main":27,"poin":51}
+  ],
+
+  "spanyol": [
+    {"pos":1,"team":"Barcelona","main":25,"poin":61},
+    {"pos":2,"team":"Real Madrid","main":25,"poin":60}
+  ],
+
+  "italia": [
+    {"pos":1,"team":"Inter Milan","main":26,"poin":64},
+    {"pos":2,"team":"AC Milan","main":26,"poin":54}
+  ]
+}
