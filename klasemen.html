@@ -189,6 +189,8 @@ document.getElementById(id).classList.add('active');
 
 </div>
 <script>
+document.addEventListener("DOMContentLoaded",function(){
+
 const logoTeam={
 "Arsenal":"https://crests.football-data.org/57.png",
 "Man City":"https://crests.football-data.org/65.png",
@@ -201,7 +203,7 @@ const logoTeam={
 "Everton":"https://crests.football-data.org/62.png",
 "Fulham":"https://crests.football-data.org/63.png",
 "Newcastle":"https://crests.football-data.org/67.png",
-"Sunderland":"https://upload.wikimedia.org/wikipedia/en/thumb/7/77/SAFC_crest.svg/240px-SAFC_crest.svg.png",
+"Sunderland":"https://upload.wikimedia.org/wikipedia/en/7/77/SAFC_crest.svg",
 "Crystal Palace":"https://crests.football-data.org/354.png",
 "Brighton":"https://crests.football-data.org/397.png",
 "Leeds United":"https://crests.football-data.org/341.png",
@@ -213,10 +215,15 @@ const logoTeam={
 };
 
 document.querySelectorAll(".team").forEach(el=>{
-  let nama = el.getAttribute("data-team");
-  if(logoTeam[nama]){
-    el.innerHTML = '<img src="'+logoTeam[nama]+'" width="22"> '+nama;
-  }
+let nama = el.textContent.replace(/\s+/g,' ').trim();
+
+if(!el.querySelector("img") && logoTeam[nama]){
+el.insertAdjacentHTML("afterbegin",
+'<img src="'+logoTeam[nama]+'" width="22" style="margin-right:6px;">'
+);
+}
+});
+
 });
 </script>
 
