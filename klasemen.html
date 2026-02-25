@@ -213,7 +213,7 @@ const logoTeam={
 "Wolves":"https://crests.football-data.org/76.png"
 };
 
-document.querySelectorAll("#ingris .team").forEach(el=>{
+document.querySelectorAll(".team").forEach(el=>{
   let nama = el.getAttribute("data-team");
   if(logoTeam[nama]){
     el.innerHTML = '<img src="'+logoTeam[nama]+'" width="22"> '+nama;
