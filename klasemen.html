@@ -2,21 +2,18 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Klasemen Liga Inggris</title>
 <style>
-body{font-family:Arial;background:#f2f2f2;margin:0;padding:10px;}
-h2{text-align:center;}
+body{font-family:Arial;background:#f2f2f2;padding:10px;}
 table{width:100%;background:#fff;border-collapse:collapse;}
-th,td{padding:8px;border-bottom:1px solid #ddd;font-size:14px;}
-th{background:#0a7f3f;color:#fff;}
+th,td{padding:8px;border-bottom:1px solid #ddd;}
 .team{display:flex;align-items:center;gap:6px;}
-.team img{width:22px;height:22px;object-fit:contain;}
+.team img{width:22px;height:22px;}
 </style>
 </head>
 
 <body>
 
-<h2>🏆 Klasemen Liga Inggris</h2>
+<h2>Test Sunderland</h2>
 
 <table>
 <tr>
@@ -25,69 +22,28 @@ th{background:#0a7f3f;color:#fff;}
 <th>Main</th>
 <th>Poin</th>
 </tr>
+
 <tr>
 <td>1</td>
-<td class="team" data-team="Arsenal">Arsenal</td>
-<td>28</td>
-<td>61</td>
-</tr>
-
-<tr>
-<td>2</td>
-<td class="team" data-team="Man City">Man City</td>
-<td>27</td>
-<td>56</td>
-</tr>
-
-<tr>
-<td>3</td>
-<td class="team" data-team="Man United">Man United</td>
-<td>27</td>
-<td>48</td>
-</tr>
-
-<tr>
-<td>4</td>
-<td class="team" data-team="Chelsea">Chelsea</td>
-<td>27</td>
-<td>45</td>
-</tr>
-
-<tr>
-<td>5</td>
-<td class="team" data-team="Liverpool">Liverpool</td>
-<td>27</td>
-<td>45</td>
-</tr>
-
-<tr>
-<td>6</td>
 <td class="team" data-team="Sunderland">Sunderland</td>
 <td>27</td>
 <td>36</td>
 </tr>
+
 </table>
 
 <script>
 const logoTeam={
-"Arsenal":"https://crests.football-data.org/57.png",
-"Man City":"https://crests.football-data.org/65.png",
-"Aston Villa":"https://crests.football-data.org/58.png",
-"Man United":"https://crests.football-data.org/66.png",
-"Chelsea":"https://crests.football-data.org/61.png",
-"Liverpool":"https://crests.football-data.org/64.png",
-"Brentford":"https://crests.football-data.org/402.png",
-"Bournemouth":"https://crests.football-data.org/1044.png",
-"Everton":"https://crests.football-data.org/62.png",
-"Fulham":"https://crests.football-data.org/63.png",
-"Newcastle":"https://crests.football-data.org/67.png",
 "Sunderland":"https://crests.football-data.org/340.png"
 };
 
 document.querySelectorAll(".team").forEach(el=>{
-  let nama = el.getAttribute("data-team");   // 🔥 GANTI INI
-  if(logoTeam[nama]){
-    el.innerHTML = '<img src="'+logoTeam[nama]+'" width="22"> '+nama;
-  }
+let nama = el.getAttribute("data-team");
+if(logoTeam[nama]){
+el.innerHTML='<img src="'+logoTeam[nama]+'"> '+nama;
+}
 });
 </script>
+
+</body>
+</html>
